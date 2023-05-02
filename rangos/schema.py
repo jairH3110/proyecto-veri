@@ -63,7 +63,7 @@ class CreateRango(graphene.Mutation):
         )
 
 
-#4
+#4l
 class Mutation(graphene.ObjectType):
     create_rango = CreateRango.Field()    
 

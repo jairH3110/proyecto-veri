@@ -59,11 +59,11 @@ class LinkTestCase(GraphQLTestCase):
 
         content = json.loads(response.content)
         #print(content)
-        # This validates the status code and if you get errors
+        # This validates the status code and if you get errores
         self.assertResponseNoErrors(response)
         print ("query rango results ")
         print (content)
-        assert len(content['data']['rangos']) == 2
+        assert len(content['data']['rangos']) == 3
 
 
     def test_createRango_mutation(self):
@@ -82,3 +82,4 @@ class LinkTestCase(GraphQLTestCase):
         self.assertDictEqual({"createRango": {'faccion':"covenant",'raza':"elites",'rango':"espada shangheli",'caracteristicas':"soldado elite",
   'peligrosidad':"alto",'representantes':"ladowir",'origen':"sanghelios",'especialidad':"ataques especiales",
   'antiguedad':"año 1300"}}, content['data'])
+
